@@ -1,6 +1,5 @@
 class PromoterUpdater():
     def promoterupdate(self):
-        # text line count
         resultLine = []
         tmp = open('K562_RNA_expression.txt','r')
         header=tmp.readline()
@@ -37,7 +36,6 @@ class PromoterUpdater():
 
 class PromoterChecker():
     def promotercheck(self):
-        # text line count
         resultLine = []
         promoter = open('ResultUpdater.txt','r')
         h3k27me3 = open('K562_H3K27me3_ChIP-seq.bed','r')
@@ -95,7 +93,6 @@ class PromoterCounter():
         h3k27me3Count = 0
         bothCount = 0
         noneCount = 0
-        header=promoter.readline()
         while True:
             line = promoter.readline().split("\t")
             if len(line) == 0 or line == "\n":
