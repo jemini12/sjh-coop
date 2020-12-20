@@ -7,4 +7,6 @@ if __name__ == '__main__':
     
     if addpromoter.promoterupdate():
         checkpromoter = module.PromoterChecker()
-        checkpromoter.promotercheck()
+        if checkpromoter.promotercheck():
+            countpromoter = module.PromoterCounter()
+            countpromoter.promotercount()
